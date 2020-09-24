@@ -1,7 +1,4 @@
-FROM ubuntu:18.04
-
-RUN apt update
-RUN apt install -y nodejs npm
+FROM node:12
 
 RUN mkdir /myapp
 
