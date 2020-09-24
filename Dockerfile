@@ -1,9 +1,17 @@
-FROM ubuntu
+FROM ubuntu:18.04
+
+RUN apt update
+RUN apt install -y nodejs npm
 
 RUN mkdir /myapp
 
 WORKDIR /myapp
 
-ADD ./hello.md .
+ADD package.json .
+ADD package-lock.json .
 
-CMD ["echo", "now I'm running"]
+RUN npm install
+
+ADD . .
+
+CMD ["npm", "start"]
