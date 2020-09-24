@@ -1,0 +1,10 @@
+{
+  "name": "DockerSandboxKhoovi",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "echo 'this does nothing for now'"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
